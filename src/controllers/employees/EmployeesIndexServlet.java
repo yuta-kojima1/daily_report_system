@@ -1,4 +1,4 @@
-package controllers.toppage;
+package controllers.employees;
 
 import java.io.IOException;
 import java.util.List;
@@ -33,6 +33,7 @@ public class EmployeesIndexServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // TODO Auto-generated method stub
         EntityManager em = DBUtil.createEntityManager();
 
         int page = 1;
@@ -60,7 +61,5 @@ public class EmployeesIndexServlet extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/employees/index.jsp");
         rd.forward(request, response);
     }
-
-
 
 }
